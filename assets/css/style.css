@@ -192,6 +192,15 @@ aside p {
   justify-content: center;
 }
 
+footer {
+  width: 85%;
+  margin-left: 7.5%;
+  height: 100vh;
+  column-gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .button {
   padding-left: 10px;
   padding-right: 10px;

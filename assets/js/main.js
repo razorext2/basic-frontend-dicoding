@@ -19,10 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const contentContainer = document.getElementById('main');
         const hero = document.getElementById('hero');
         const controllerTwo = document.getElementById('controller-two');
-        const toTopButton = document.getElementById('to-top');
 
-        toTopButton.style.display = 'block';
-        toTopButton.style.animation = 'fadeInStay 0.5s forwards, fromBottom 1s forwards';
         controllerTwo.style.animation = 'scaleUp 0.5s forwards';
         controllerTwo.style.animationDelay = '100ms';
         contentContainer.style.display = 'flex';
@@ -33,13 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     controllerOne.addEventListener('click', function () {
-        console.log('clicked');
         document.getElementById('hero').style.display = 'block';
         document.getElementById('hero').style.animation = 'fadeInStay 0.5s forwards';
         document.getElementById('main').style.display = 'none';
     })
 
     controllerThree.addEventListener('click', function () {
-        console.log('clicked');
+        document.getElementById('main').style.display = 'none';
+        document.querySelector('footer').style.display = 'flex';
+        document.querySelector('footer').style.animation = 'fadeInStay 0.5s forwards';
     })
 });

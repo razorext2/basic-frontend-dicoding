@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Poppins;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  z-index: 1;
+  opacity: 1;
+}
+
+nav {
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+nav #logo {
+  color: red;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+nav li a {
+  color: #fff;
+  padding: 5px;
+}
+
+#hero {
+  background-color: #121212;
+  height: 100vh;
+  padding: 20px;
+}
+
+#hero h1 {
+  font-size: 8em;
+}
+
+#hero {
+  position: relative;
+  color: #fff;
+}
+
+#hero h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#hero .main-text {
+  animation: fadeInGone 2.5s forwards;
+  z-index: 1;
+}
+
+#hero .second-text {
+  opacity: 0;
+  animation: fadeInStay 2.5s forwards;
+  animation-delay: 2s;
+}
+
+#hero .button {
+  opacity: 0;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: fadeInStay 2.5s forwards, bounce 2s infinite alternate forwards;
+  animation-delay: 4s;
+}
+
+#main {
+  width: 85%;
+  margin-left: 7.5%;
+  height: 100vh;
+  display: none;
+  column-gap: 4rem;
+}
+
+#content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  row-gap: 8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#content .left,
+#content .right {
+  width: 100%;
+}
+
+.left {
+  float: left;
+  text-align: left;
+}
+
+.right {
+  float: right;
+  text-align: right;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+aside p {
+  font-size: small;
+}
+
+#controller {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4em;
+}
+
+#controller-one {
+  transform: rotate(-10deg);
+}
+
+#controller-three {
+  transform: rotate(10deg);
+}
+
+#controller-one,
+#controller-three {
+  animation: scaleDownBit 0.5s forwards;
+}
+
+#controller-one:hover,
+#controller-three:hover {
+  animation: scaleUpBit 0.5s forwards;
+}
+
+#to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+#to-top a {
+  padding: 10px;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.transparent {
+  background-color: transparent !important;
+  border: none;
+}
+
+.heading {
+  font-size: 4em;
+}
+
+.rounded-controller {
+  margin-left: 25px;
+  width: 5px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 100%;
+  border: none;
+}
+
+.rounded-controller {
+  animation: scaleDown 0.5s forwards;
+}
+
+.rounded-controller:hover {
+  animation: scaleUp 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutNone {
+  0% {
+    opacity: 1;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    height: 0vh;
+  }
+}
+
+@keyframes fadeInStay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInGone {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 2.5;
+  }
+}
+
+@keyframes scaleUpBit {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1.25;
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    scale: 2.5;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes scaleDownBit {
+  0% {
+    scale: 1.25;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
